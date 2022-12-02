@@ -14,8 +14,7 @@ http://127.0.0.1:8000/
 
 You can now filter with the JSON keys into the url, e.g:
 
-http://127.0.0.1:8000/?student_id=1001735333
-
+http://127.0.0.1:8000/?student_id=http://127.0.0.1:8000/?student_id="https://doi.org/10.1016/j.ascom.2022.100623
 
 
 ## Frontend
