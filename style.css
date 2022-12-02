@@ -1,12 +1,14 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #070116;
+    background-color: #f4fddd;# se modifica el fondo de la pagina
+    border: 5px solid black;
   }
   
   div {
     text-align: center;
-    background-color: rgb(41, 216, 216);
+    background-color: rgb(255, 190, 54);# modifico el fondo del titulo de la pagina 
     padding: 10px;
+    padding: 0 20px 20px 20px;
   }
   
   .output {
@@ -23,7 +25,8 @@ body {
     letter-spacing: 2px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient( 160deg, #ff0000, #ec008c );
+    background-image: linear-gradient( 135deg, orange 60%, cyan);
     border-radius: 30px;
-    cursor: pointer;
+    cursor: pointer
+    
   }
