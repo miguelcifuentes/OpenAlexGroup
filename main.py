@@ -49,3 +49,6 @@ def read_item(student_id: str = ""):
         return db
     else:
         return new_db
+  
+if_name_"main":
+  uvicorn.run(app)
