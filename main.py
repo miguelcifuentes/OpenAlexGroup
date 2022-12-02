@@ -13,8 +13,9 @@ import json
 
 app = FastAPI()
 
-file='https://raw.githubusercontent.com/restrepo/OpenAlexGroup/main/data/calificaciones.json'
-
+file='https://raw.githubusercontent.com/miguelcifuentes/OpenAlexGroup/main/data/OpenAlex%20Cosmology%20(1).json'
+      
+    
 #JSON SCHEME
 #[{"student_id": str,
 # "Evaluation 1":{"value": int,
@@ -37,7 +38,7 @@ def read_item(student_id: str = ""):
     #Real time JSON file
     r=requests.get(file)
     db=r.json()
-    new_db=[ d for d in db if d.get('student_id')==student_id  ]
+    new_db=[ d for d in db if str(d.get('doi'))==student_id ]
     f=open('data/filtered.json','w')
     json.dump(new_db,f)
     f.close()
@@ -45,6 +46,6 @@ def read_item(student_id: str = ""):
     #   db=json.load(json_file)
 
     if not student_id:
-    	return db
+        return db
     else:
-    	return new_db
+        return new_db
