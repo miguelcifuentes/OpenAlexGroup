@@ -38,7 +38,7 @@ def read_item(student_id: str = ""):
     #Real time JSON file
     r=requests.get(file)
     db=r.json()
-    new_db=[ d for d in db if str(d.get('doi'))==student_id ]
+    new_db=[ d for d in db if str(d.get('publication_year'))==student_id ]
     f=open('data/filtered.json','w')
     json.dump(new_db,f)
     f.close()
